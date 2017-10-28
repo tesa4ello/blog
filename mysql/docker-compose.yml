@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  mariadb:
+    image: 'bitnami/mariadb:latest'
+    environment:
+      - MARIADB_ROOT_PASSWORD=laravelpass
+    ports:
+      - '3307:3306'
+    volumes:
+      - /var/www/blog/mysql/docker/mysql/db
